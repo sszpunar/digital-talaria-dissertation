@@ -11,7 +11,7 @@ September 2026
 
 ## Scope of this repository
 
-This repository contains the **data generation and statistical analysis artifacts** for the Digital Talaria dissertation: the seeded synthetic cohort generator, the evaluation dataset, the Chapter 4 analysis notebook, and all 44 published figures.
+This repository contains the **data generation and statistical analysis artifacts** for the Digital Talaria dissertation: the seeded synthetic cohort generator, the evaluation dataset, the Chapter 4 analysis notebook, and all 44 published figures, plus six requiring the separately licensed FitRec dataset.
 
 The **Talaria Fusion Network implementation is maintained separately and is not included here.** Neither are the five baseline model implementations, the constraint layer, the simulation harness, or the test suites. This repository exists so that the study's synthetic cohort can be independently regenerated and its published statistics independently recomputed.
 
@@ -123,7 +123,7 @@ digital-talaria-dissertation/
 │   └── wearable_data.py          # wearable schema and simulator
 ├── notebooks/
 │   ├── chapter4_analysis.ipynb   # all Chapter 4 statistics and figures
-│   └── figures/                  # 44 PNGs at 300 DPI
+│   └── figures/                  # 44 PNGs at 300 DPI, plus six requiring the separately licensed FitRec dataset
 ├── data/
 │   ├── profiles/
 │   │   ├── profiles.json         # 200 generated profiles
