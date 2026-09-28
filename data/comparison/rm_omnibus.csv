@@ -1,0 +1,15 @@
+study,research_question,dimension,cell,test,chi_square,df,p_value,kendalls_w,effect_magnitude,n_blocks,k_conditions,significant,meaningful
+Study 1,RQ1,overall,overall,Friedman,60.6117,5,9.084e-12,0.0758,negligible,160,6,True,False
+Study 1,RQ2,profile_type,profile_type=PA,Friedman,107.5,5,1.383e-21,0.6719,large,32,6,True,True
+Study 1,RQ2,profile_type,profile_type=UW,Friedman,51.625,5,6.440e-10,0.3227,moderate,32,6,True,True
+Study 1,RQ2,profile_type,profile_type=OW,Friedman,8.6071,5,1.258e-01,0.0538,negligible,32,6,False,False
+Study 1,RQ2,profile_type,profile_type=HS,Friedman,14.0179,5,1.550e-02,0.0876,negligible,32,6,True,False
+Study 1,RQ2,profile_type,profile_type=SD,Friedman,6.1439,5,2.925e-01,0.0384,negligible,32,6,False,False
+Study 1,RQ3,training_phase,training_phase=base,Friedman,12.6335,5,2.707e-02,0.0158,negligible,160,6,True,False
+Study 1,RQ3,training_phase,training_phase=build,Friedman,44.916,5,1.509e-08,0.0561,negligible,160,6,True,False
+Study 1,RQ3,training_phase,training_phase=peak,Friedman,35.1768,5,1.387e-06,0.044,negligible,160,6,True,False
+Study 1,RQ3,training_phase,training_phase=taper,Friedman,33.8069,5,2.601e-06,0.0423,negligible,160,6,True,False
+Study 1,RQ4,fitness_tier,fitness_tier=low,Friedman,6.1382,5,2.930e-01,0.0227,negligible,54,6,False,False
+Study 1,RQ4,fitness_tier,fitness_tier=mid,Friedman,32.226,5,5.359e-06,0.1172,small,55,6,True,True
+Study 1,RQ4,fitness_tier,fitness_tier=high,Friedman,76.4678,5,4.594e-15,0.2999,small,51,6,True,True
+Study 2,RQ5,ablation,additive_staircase,Friedman,589.2847,7,4.941e-123,0.5261,large,160,8,True,True

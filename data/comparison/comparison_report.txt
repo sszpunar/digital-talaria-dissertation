@@ -1,0 +1,195 @@
+======================================================================
+  DIGITAL TALARIA — 13-Model Cross-Model Comparison Report
+======================================================================
+
+  Models evaluated  : 13
+  Models missing    : None
+  Simulation cohort : 160 runners
+  Plan duration     : 20 weeks (marathon)
+  Expected rows/model: 22,400
+
+AGGREGATE ADHERENCE BY MODEL
+----------------------------------------
+  Logistic Regression       : 0.8041
+  XGBoost                   : 0.8117
+  SASRec                    : 0.8100
+  Transformer               : 0.8015
+  Two-Tower                 : 0.8117
+  TFN-B                     : 0.7982
+  TFN-B-G                   : 0.7982
+  TFN-BG-C                  : 0.8022
+  TFN-BGC-Uq                : 0.8041
+  TFN-BGCUq-W               : 0.8114
+  TFN-BGCUqW-Mh             : 0.8114
+  TFN-BGCUqWMh-Mt           : 0.8140
+  TFN (Complete architecture) : 0.8141
+
+BY PROFILE TYPE
+----------------------------------------
+  Type    logreg      xgb         sasrec      transfor    two_towe    TFN-B       TFN-B-G     TFN-BG-C    TFN-BGC-    TFN-BGCU    TFN-BGCU    TFN-BGCU    TFN       
+  PA      0.8744      0.9141      0.9072      0.8734      0.8922      0.8926      0.8926      0.8816      0.8958      0.9127      0.9127      0.9120      0.9131    
+  UW      0.8289      0.8314      0.8308      0.8254      0.8431      0.8187      0.8187      0.8274      0.8249      0.8347      0.8347      0.8446      0.8436    
+  OW      0.8385      0.8366      0.8349      0.8365      0.8392      0.8270      0.8270      0.8391      0.8343      0.8393      0.8393      0.8423      0.8419    
+  HS      0.7132      0.7105      0.7129      0.7057      0.7148      0.7023      0.7023      0.7042      0.7067      0.7100      0.7100      0.7094      0.7095    
+  SD      0.7654      0.7660      0.7642      0.7662      0.7692      0.7503      0.7503      0.7589      0.7587      0.7601      0.7601      0.7618      0.7623    
+
+BY TRAINING PHASE
+----------------------------------------
+  BASE
+    Logistic Regression       : 0.8067
+    XGBoost                   : 0.8139
+    SASRec                    : 0.8111
+    Transformer               : 0.8059
+    Two-Tower                 : 0.8092
+    TFN-B                     : 0.8013
+    TFN-B-G                   : 0.8013
+    TFN-BG-C                  : 0.7988
+    TFN-BGC-Uq                : 0.8038
+    TFN-BGCUq-W               : 0.8110
+    TFN-BGCUqW-Mh             : 0.8110
+    TFN-BGCUqWMh-Mt           : 0.8129
+    TFN (Complete architecture) : 0.8126
+  BUILD
+    Logistic Regression       : 0.8011
+    XGBoost                   : 0.8106
+    SASRec                    : 0.8081
+    Transformer               : 0.7946
+    Two-Tower                 : 0.8086
+    TFN-B                     : 0.7886
+    TFN-B-G                   : 0.7886
+    TFN-BG-C                  : 0.7991
+    TFN-BGC-Uq                : 0.8027
+    TFN-BGCUq-W               : 0.8099
+    TFN-BGCUqW-Mh             : 0.8099
+    TFN-BGCUqWMh-Mt           : 0.8126
+    TFN (Complete architecture) : 0.8135
+  PEAK
+    Logistic Regression       : 0.8027
+    XGBoost                   : 0.8147
+    SASRec                    : 0.8148
+    Transformer               : 0.8001
+    Two-Tower                 : 0.8194
+    TFN-B                     : 0.7947
+    TFN-B-G                   : 0.7947
+    TFN-BG-C                  : 0.8061
+    TFN-BGC-Uq                : 0.8063
+    TFN-BGCUq-W               : 0.8138
+    TFN-BGCUqW-Mh             : 0.8138
+    TFN-BGCUqWMh-Mt           : 0.8169
+    TFN (Complete architecture) : 0.8168
+  TAPER
+    Logistic Regression       : 0.8058
+    XGBoost                   : 0.8072
+    SASRec                    : 0.8064
+    Transformer               : 0.8064
+    Two-Tower                 : 0.8124
+    TFN-B                     : 0.8114
+    TFN-B-G                   : 0.8114
+    TFN-BG-C                  : 0.8082
+    TFN-BGC-Uq                : 0.8043
+    TFN-BGCUq-W               : 0.8116
+    TFN-BGCUqW-Mh             : 0.8116
+    TFN-BGCUqWMh-Mt           : 0.8150
+    TFN (Complete architecture) : 0.8146
+
+BY FITNESS TIER
+----------------------------------------
+  LOW
+    Logistic Regression       : 0.8040
+    XGBoost                   : 0.8022
+    SASRec                    : 0.8010
+    Transformer               : 0.8025
+    Two-Tower                 : 0.8058
+    TFN-B                     : 0.7891
+    TFN-B-G                   : 0.7891
+    TFN-BG-C                  : 0.7985
+    TFN-BGC-Uq                : 0.7962
+    TFN-BGCUq-W               : 0.7998
+    TFN-BGCUqW-Mh             : 0.7998
+    TFN-BGCUqWMh-Mt           : 0.8036
+    TFN (Complete architecture) : 0.8035
+  MID
+    Logistic Regression       : 0.7803
+    XGBoost                   : 0.7815
+    SASRec                    : 0.7814
+    Transformer               : 0.7766
+    Two-Tower                 : 0.7880
+    TFN-B                     : 0.7714
+    TFN-B-G                   : 0.7714
+    TFN-BG-C                  : 0.7787
+    TFN-BGC-Uq                : 0.7778
+    TFN-BGCUq-W               : 0.7836
+    TFN-BGCUqW-Mh             : 0.7836
+    TFN-BGCUqWMh-Mt           : 0.7866
+    TFN (Complete architecture) : 0.7866
+  HIGH
+    Logistic Regression       : 0.8298
+    XGBoost                   : 0.8544
+    SASRec                    : 0.8503
+    Transformer               : 0.8271
+    Two-Tower                 : 0.8435
+    TFN-B                     : 0.8367
+    TFN-B-G                   : 0.8367
+    TFN-BG-C                  : 0.8315
+    TFN-BGC-Uq                : 0.8407
+    TFN-BGCUq-W               : 0.8535
+    TFN-BGCUqW-Mh             : 0.8535
+    TFN-BGCUqWMh-Mt           : 0.8547
+    TFN (Complete architecture) : 0.8549
+
+STATISTICAL TESTS
+----------------------------------------
+  Kruskal-Wallis H   : 185.1099
+  Degrees of freedom : 12
+  p-value            : 0.000000
+  Epsilon-squared    : 0.0042
+  Significant        : Yes (α=0.05)
+
+SIGNIFICANT PAIRWISE COMPARISONS (Dunn / Bonferroni)
+----------------------------------------
+  logreg               vs two_tower            p=0.0196  z=-3.660
+  logreg               vs TFN-BGCUq-W          p=0.0156  z=-3.719
+  logreg               vs TFN-BGCUqW-Mh        p=0.0156  z=-3.719
+  logreg               vs TFN-BGCUqWMh-Mt      p=0.0000  z=-5.441
+  logreg               vs TFN                  p=0.0000  z=-5.374
+  xgb                  vs transformer          p=0.0111  z=3.804
+  xgb                  vs TFN-B                p=0.0000  z=5.455
+  xgb                  vs TFN-B-G              p=0.0000  z=5.455
+  sasrec               vs TFN-B                p=0.0001  z=4.927
+  sasrec               vs TFN-B-G              p=0.0001  z=4.927
+  transformer          vs two_tower            p=0.0005  z=-4.502
+  transformer          vs TFN-BGCUq-W          p=0.0004  z=-4.560
+  transformer          vs TFN-BGCUqW-Mh        p=0.0004  z=-4.560
+  transformer          vs TFN-BGCUqWMh-Mt      p=0.0000  z=-6.283
+  transformer          vs TFN                  p=0.0000  z=-6.216
+  two_tower            vs TFN-B                p=0.0000  z=6.153
+  two_tower            vs TFN-B-G              p=0.0000  z=6.153
+  two_tower            vs TFN-BG-C             p=0.0092  z=3.851
+  two_tower            vs TFN-BGC-Uq           p=0.0193  z=3.665
+  TFN-B                vs TFN-BGCUq-W          p=0.0000  z=-6.211
+  TFN-B                vs TFN-BGCUqW-Mh        p=0.0000  z=-6.211
+  TFN-B                vs TFN-BGCUqWMh-Mt      p=0.0000  z=-7.934
+  TFN-B                vs TFN                  p=0.0000  z=-7.867
+  TFN-B-G              vs TFN-BGCUq-W          p=0.0000  z=-6.211
+  TFN-B-G              vs TFN-BGCUqW-Mh        p=0.0000  z=-6.211
+  TFN-B-G              vs TFN-BGCUqWMh-Mt      p=0.0000  z=-7.934
+  TFN-B-G              vs TFN                  p=0.0000  z=-7.867
+  TFN-BG-C             vs TFN-BGCUq-W          p=0.0072  z=-3.909
+  TFN-BG-C             vs TFN-BGCUqW-Mh        p=0.0072  z=-3.909
+  TFN-BG-C             vs TFN-BGCUqWMh-Mt      p=0.0000  z=-5.632
+  TFN-BG-C             vs TFN                  p=0.0000  z=-5.565
+  TFN-BGC-Uq           vs TFN-BGCUq-W          p=0.0153  z=-3.724
+  TFN-BGC-Uq           vs TFN-BGCUqW-Mh        p=0.0153  z=-3.724
+  TFN-BGC-Uq           vs TFN-BGCUqWMh-Mt      p=0.0000  z=-5.446
+  TFN-BGC-Uq           vs TFN                  p=0.0000  z=-5.379
+
+OUTPUT FILES
+----------------------------------------
+  Combined SPSS    : data\comparison\combined_spss.csv
+  By profile type  : data\comparison\by_profile_type.csv
+  By phase         : data\comparison\by_phase.csv
+  By fitness tier  : data\comparison\by_fitness_tier.csv
+  Statistical tests: data\comparison\statistical_tests.csv
+  Pairwise tests   : data\comparison\pairwise_tests.csv
+
+======================================================================

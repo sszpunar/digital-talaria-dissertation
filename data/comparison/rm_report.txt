@@ -1,0 +1,169 @@
+==============================================================================
+  DIGITAL TALARIA - Repeated-Measures Analysis (Study 1 and Study 2)
+==============================================================================
+
+  Design      : fully crossed repeated measures
+  Blocks      : evaluation runners
+  Omnibus     : Friedman test
+  Effect size : Kendall's W
+  Post hoc    : pairwise Wilcoxon signed-rank, Bonferroni corrected
+  Alpha       : 0.05
+
+  A difference is reported as meaningful when it is statistically
+  significant and Kendall's W is at least 0.1.
+
+------------------------------------------------------------------------------
+  RQ1  (Study 1)
+------------------------------------------------------------------------------
+  cell                            chi2  df           p        W   magnitude     n
+  overall                        60.61   5    9.08e-12   0.0758  negligible   160
+
+  Meaningful differences: none
+
+------------------------------------------------------------------------------
+  RQ2  (Study 1)
+------------------------------------------------------------------------------
+  cell                            chi2  df           p        W   magnitude     n
+  profile_type=PA               107.50   5    1.38e-21   0.6719       large    32
+  profile_type=UW                51.62   5    6.44e-10   0.3227    moderate    32
+  profile_type=OW                 8.61   5    1.26e-01   0.0538  negligible    32
+  profile_type=HS                14.02   5    1.55e-02   0.0876  negligible    32
+  profile_type=SD                 6.14   5    2.92e-01   0.0384  negligible    32
+
+  Meaningful differences: profile_type=PA, profile_type=UW
+
+------------------------------------------------------------------------------
+  RQ3  (Study 1)
+------------------------------------------------------------------------------
+  cell                            chi2  df           p        W   magnitude     n
+  training_phase=base            12.63   5    2.71e-02   0.0158  negligible   160
+  training_phase=build           44.92   5    1.51e-08   0.0561  negligible   160
+  training_phase=peak            35.18   5    1.39e-06   0.0440  negligible   160
+  training_phase=taper           33.81   5    2.60e-06   0.0423  negligible   160
+
+  Meaningful differences: none
+
+------------------------------------------------------------------------------
+  RQ4  (Study 1)
+------------------------------------------------------------------------------
+  cell                            chi2  df           p        W   magnitude     n
+  fitness_tier=low                6.14   5    2.93e-01   0.0227  negligible    54
+  fitness_tier=mid               32.23   5    5.36e-06   0.1172       small    55
+  fitness_tier=high              76.47   5    4.59e-15   0.2999       small    51
+
+  Meaningful differences: fitness_tier=mid, fitness_tier=high
+
+------------------------------------------------------------------------------
+  RQ5  (Study 2)
+------------------------------------------------------------------------------
+  cell                            chi2  df           p        W   magnitude     n
+  additive_staircase            589.28   7   4.94e-123   0.5261       large   160
+
+  Meaningful differences: additive_staircase
+
+------------------------------------------------------------------------------
+  STUDY 2 - EACH CONFIGURATION AGAINST THE COMPLETE TFN
+------------------------------------------------------------------------------
+  configuration            median diff       p_adj   verdict
+  TFN-B                       -0.01397    5.89e-26   significantly below complete TFN
+  TFN-B-G                     -0.01397    5.89e-26   significantly below complete TFN
+  TFN-BG-C                    -0.00714    1.46e-15   significantly below complete TFN
+  TFN-BGC-Uq                  -0.00761    1.07e-19   significantly below complete TFN
+  TFN-BGCUq-W                 -0.00139    7.44e-03   significantly below complete TFN
+  TFN-BGCUqW-Mh               -0.00139    7.44e-03   significantly below complete TFN
+  TFN-BGCUqWMh-Mt              0.00000    1.00e+00   not significant
+
+------------------------------------------------------------------------------
+  STUDY 1 - SIGNIFICANT PAIRWISE COMPARISONS (Bonferroni corrected)
+------------------------------------------------------------------------------
+  overall
+    Transformer           < Two-Tower             p=2.27e-10  median diff=-0.00730
+    Transformer           < TFN                   p=4.46e-09  median diff=-0.00879
+    Logistic Regression   < Two-Tower             p=9.87e-07  median diff=-0.00680
+    Logistic Regression   < TFN                   p=1.05e-05  median diff=-0.00758
+    XGBoost               > Transformer           p=7.93e-05  median diff=+0.00560
+    SASRec                > Transformer           p=9.90e-05  median diff=+0.00502
+    Logistic Regression   < XGBoost               p=3.89e-02  median diff=-0.00278
+
+  profile_type=PA
+    Logistic Regression   < XGBoost               p=6.98e-09  median diff=-0.04447
+    Transformer           < TFN                   p=6.98e-09  median diff=-0.04002
+    Logistic Regression   < TFN                   p=1.40e-08  median diff=-0.03974
+    Two-Tower             < TFN                   p=2.10e-08  median diff=-0.02144
+    Logistic Regression   < SASRec                p=6.98e-08  median diff=-0.03195
+    XGBoost               > Transformer           p=6.98e-08  median diff=+0.04457
+    SASRec                > Transformer           p=3.00e-07  median diff=+0.03436
+    Transformer           < Two-Tower             p=1.45e-06  median diff=-0.01866
+    Logistic Regression   < Two-Tower             p=1.04e-05  median diff=-0.01886
+    XGBoost               > Two-Tower             p=1.31e-04  median diff=+0.02440
+    SASRec                > Two-Tower             p=8.37e-03  median diff=+0.01757
+
+  profile_type=UW
+    Transformer           < Two-Tower             p=1.21e-05  median diff=-0.01309
+    XGBoost               < TFN                   p=1.66e-05  median diff=-0.01119
+    Transformer           < TFN                   p=2.60e-05  median diff=-0.01514
+    XGBoost               < Two-Tower             p=3.01e-05  median diff=-0.00989
+    Logistic Regression   < TFN                   p=6.89e-05  median diff=-0.01606
+    SASRec                < TFN                   p=1.68e-04  median diff=-0.01028
+    Logistic Regression   < Two-Tower             p=7.34e-04  median diff=-0.01434
+    SASRec                < Two-Tower             p=4.60e-03  median diff=-0.01199
+
+  profile_type=OW: no significant pairwise differences
+
+  profile_type=HS
+    Logistic Regression   > Transformer           p=9.09e-03  median diff=+0.01081
+    Transformer           < Two-Tower             p=2.89e-02  median diff=-0.00652
+
+  profile_type=SD: no significant pairwise differences
+
+  training_phase=base
+    Transformer           < TFN                   p=8.96e-03  median diff=-0.00837
+    Logistic Regression   < TFN                   p=2.36e-02  median diff=-0.00559
+
+  training_phase=build
+    Transformer           < TFN                   p=1.01e-09  median diff=-0.01419
+    Transformer           < Two-Tower             p=1.42e-06  median diff=-0.01002
+    XGBoost               > Transformer           p=1.81e-04  median diff=+0.00716
+    Logistic Regression   < TFN                   p=2.44e-04  median diff=-0.01062
+    SASRec                > Transformer           p=4.29e-04  median diff=+0.00666
+    Logistic Regression   < Two-Tower             p=2.32e-03  median diff=-0.00624
+
+  training_phase=peak
+    Transformer           < Two-Tower             p=8.15e-06  median diff=-0.01346
+    Transformer           < TFN                   p=1.05e-05  median diff=-0.01632
+    Logistic Regression   < Two-Tower             p=2.18e-04  median diff=-0.01054
+    Logistic Regression   < TFN                   p=3.01e-04  median diff=-0.01155
+    XGBoost               > Transformer           p=4.21e-04  median diff=+0.00835
+    SASRec                > Transformer           p=1.41e-03  median diff=+0.00879
+    Logistic Regression   < SASRec                p=2.58e-02  median diff=-0.00500
+    Logistic Regression   < XGBoost               p=3.26e-02  median diff=-0.00690
+
+  training_phase=taper
+    XGBoost               < TFN                   p=3.60e-04  median diff=-0.00580
+    SASRec                < TFN                   p=4.70e-04  median diff=-0.00912
+    Logistic Regression   < TFN                   p=6.22e-04  median diff=-0.00745
+    Transformer           < TFN                   p=7.16e-04  median diff=-0.00855
+    Logistic Regression   < Two-Tower             p=1.02e-02  median diff=-0.00851
+    XGBoost               < Two-Tower             p=2.12e-02  median diff=-0.00680
+
+  fitness_tier=low: no significant pairwise differences
+
+  fitness_tier=mid
+    Transformer           < Two-Tower             p=1.47e-03  median diff=-0.00936
+    Transformer           < TFN                   p=1.80e-03  median diff=-0.00651
+    Logistic Regression   < Two-Tower             p=1.32e-02  median diff=-0.00529
+    XGBoost               < TFN                   p=1.83e-02  median diff=-0.00520
+    XGBoost               < Two-Tower             p=2.31e-02  median diff=-0.00463
+
+  fitness_tier=high
+    Transformer           < TFN                   p=4.31e-07  median diff=-0.03014
+    Transformer           < Two-Tower             p=6.60e-07  median diff=-0.01778
+    XGBoost               > Transformer           p=2.81e-06  median diff=+0.02772
+    Logistic Regression   < TFN                   p=3.61e-06  median diff=-0.02779
+    SASRec                > Transformer           p=5.65e-06  median diff=+0.02144
+    Logistic Regression   < Two-Tower             p=3.16e-05  median diff=-0.01524
+    Logistic Regression   < XGBoost               p=4.56e-05  median diff=-0.02265
+    Logistic Regression   < SASRec                p=9.36e-05  median diff=-0.01948
+    Two-Tower             < TFN                   p=1.69e-03  median diff=-0.01452
+
+==============================================================================
