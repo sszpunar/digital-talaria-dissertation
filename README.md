@@ -27,7 +27,7 @@ Digital Talaria is a constraint-aware machine learning recommender system that g
 
 **Ablation (Study 2):** Eight additive configurations in staircase order, from a Banister-only baseline to the complete architecture, plus two subtractive configurations that remove a single feature signal from the complete model.
 
-**Evaluation:** Every runner is evaluated under every configuration with identical constraint conditions and identical disruption draws, producing a paired counterfactual design across 160 evaluation runners and 20 simulated weeks.
+**Evaluation:** Every runner is evaluated under every configuration under identical profile, preference, and constraint conditions, producing a fully crossed repeated-measures design across 160 evaluation runners and 20 simulated weeks.
 
 ---
 
@@ -37,7 +37,7 @@ Digital Talaria is a constraint-aware machine learning recommender system that g
 
 Friedman omnibus test: **χ²(5) = 60.61, p < .001, Kendall's W = 0.0758** (negligible)
 
-Every runner is evaluated under every model with identical disruption draws, making this a fully crossed repeated-measures design with the runner as the blocking factor. Independent-samples tests are inappropriate for this structure.
+Every runner is evaluated under every model under identical conditions, making this a fully crossed repeated-measures design with the runner as the blocking factor. Independent-samples tests are inappropriate for this structure. The adherence simulator's random draw is not held constant across models unless `PYTHONHASHSEED` is fixed, so reported effect sizes are lower bounds.
 
 | Rank | Model | Mean adherence |
 |---|---|---|

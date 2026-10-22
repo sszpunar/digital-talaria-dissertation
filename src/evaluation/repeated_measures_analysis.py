@@ -9,10 +9,16 @@ evaluation dataset written by comparison_evaluator.py.
 Design rationale
 ----------------
 Every runner in the evaluation cohort is assessed under every model and every
-ablation configuration, with identical disruption draws supplied by the shared
-adherence simulator. Both studies are therefore fully crossed repeated-measures
-designs in which the runner is the blocking factor and the model or
-configuration is the within-block condition.
+ablation configuration, under identical profile, preference, and constraint
+conditions. Both studies are therefore fully crossed repeated-measures designs
+in which the runner is the blocking factor and the model or configuration is
+the within-block condition.
+
+The adherence simulator's per-day random draw is seeded from Python's salted
+string hash and is therefore not held constant across models unless
+PYTHONHASHSEED is fixed before each simulation process starts. The blocking
+structure is unaffected, but the stochastic component is uncontrolled, so the
+effect sizes reported here are lower bounds.
 
 The Kruskal-Wallis H-test assumes independent samples and is not appropriate
 for this structure. Applying it treats repeated observations on the same runner
